@@ -1,4 +1,13 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+  --header-title-color: #DB00FF;
+  --accent-color: #FF0070;
+  --header-bg-discr-color: #FF0070;
+  --header-title-shadow-color: #FF0070;
+  --text-color: #000028;
+  --main-title-text-color: #FF0070;
+  --main-discr-color: #F1B2CE;
+  --footer-title-color: #DB00FF;
+  --footer-title-shadow-color: #FF0070;
+  --link-shadow-color: #FF0070;
+  --bg-pic: url(../images/cover-image-dark.png);
+}
