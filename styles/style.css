@@ -356,6 +356,7 @@ a:focus-visible {
     grid-template-rows: 269px 272px 279px 163px;
     margin: 20px 20px 0px 20px;
     margin-bottom: 80px;
+    min-height: 984px;
   }
 
   .header__block-title {
@@ -455,6 +456,7 @@ a:focus-visible {
   .header {
     grid-template-columns: 1fr;
     grid-template-rows: 26px 403px 185px 114px;
+    min-height: 728px;
   }
 
   .header__theme-menu {
