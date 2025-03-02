@@ -39,13 +39,11 @@
     --bg-pic: url(../images/cover-image-light.png);
   }
 
-  .theme-light .page {
-    .decorated__element p {
-      display: none;
-    }
+  .decorated__element p {
+    display: none;
+  }
   
-    .decorated__element::after {
-      display: none;
-    }
+  .decorated__element::after {
+    display: none;
   }
 }
