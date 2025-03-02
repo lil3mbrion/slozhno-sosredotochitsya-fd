@@ -1,8 +1,9 @@
 .page{
   background-image: var(--bg-pic);
-  background-size: cover;
+  background-size:cover;
   background-position: center;
   background-attachment: fixed;
+  background-color: var(--bg-color-page);
 }
 
 .header {

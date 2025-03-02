@@ -1,4 +1,5 @@
 :root.theme-light {
+  --bg-color-page: #FFF1F7;
   --header-title-color: #FFC2E6;
   --accent-color: #353430;
   --header-bg-discr-color: #FF8DCB;
@@ -24,6 +25,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
+    --bg-color-page: #FFF1F7;
     --header-title-color: #FFC2E6;
     --accent-color: #353430;
     --header-bg-discr-color: #FF8DCB;

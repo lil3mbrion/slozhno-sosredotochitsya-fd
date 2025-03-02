@@ -1,4 +1,5 @@
 :root.theme-dark {
+  --bg-color-page: #000028;
   --header-title-color: #DB00FF;
   --accent-color: #FF0070;
   --header-bg-discr-color: #FF0070;
