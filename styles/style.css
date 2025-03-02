@@ -80,10 +80,6 @@
   margin-bottom: 10px;
 }
 
-.header__theme-menu-item:last-child {
-  border: 1px solid var(--accent-color);
-}
-
 .header__theme-menu-button {
   border: none;
   font: inherit;
@@ -346,6 +342,8 @@ a:focus-visible {
 
 .header__theme-menu-button_active {
   pointer-events: none;
+  border: 1px solid var(--accent-color);
+  width: 100%;
 }
 
 @media (width>=768px) {
