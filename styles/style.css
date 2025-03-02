@@ -11,8 +11,8 @@
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: 162px 257px 172px 56px;
   margin: 10px 10px 0px 10px;
-  margin-bottom: 50px;
-  min-height: 648px;
+  margin-bottom: 30px;
+  min-height: 668px;
   height: 100vh;
 }
 
@@ -271,7 +271,7 @@
   grid-template-rows: 25px 598px 25px;
   grid-template-columns: 1fr;
   height: 100vh;
-  min-height: 647px;
+  min-height: 668px;
 }
 
 .footer_title {
@@ -356,8 +356,8 @@ a:focus-visible {
     grid-template-columns: 1fr;
     grid-template-rows: 269px 272px 279px 163px;
     margin: 20px 20px 0px 20px;
-    margin-bottom: 80px;
-    min-height: 984px;
+    margin-bottom: 40px;
+    min-height: 1024px;
   }
 
   .header__block-title {
@@ -445,7 +445,6 @@ a:focus-visible {
   .footer {
     margin: 80px 20px 20px 20px;
     grid-template-rows: 25px 934px 25px;
-    min-height: 984px;
   }
 
   .footer_title {
@@ -458,7 +457,7 @@ a:focus-visible {
   .header {
     grid-template-columns: 1fr;
     grid-template-rows: 26px 403px 185px 114px;
-    min-height: 728px;
+    min-height: 768px;
   }
 
   .header__theme-menu {
@@ -514,7 +513,6 @@ a:focus-visible {
 
   .footer {
     grid-template-rows: 25px 678px 25px;
-    min-height: 728px;
   }
 }
 
