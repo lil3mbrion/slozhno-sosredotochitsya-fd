@@ -12,6 +12,7 @@
   grid-template-rows: 162px 257px 172px 56px;
   margin: 10px 10px 0px 10px;
   margin-bottom: 50px;
+  height: minmax(648px, 100vh);
 }
 
 .decorated__element {
@@ -268,6 +269,7 @@
   display: grid;
   grid-template-rows: 25px 598px 25px;
   grid-template-columns: 1fr;
+  height: 100vh;
 }
 
 .footer_title {
@@ -353,6 +355,7 @@ a:focus-visible {
     grid-template-rows: 269px 272px 279px 163px;
     margin: 20px 20px 0px 20px;
     margin-bottom: 80px;
+    height: minmax(984px, 100vh);
   }
 
   .header__block-title {
@@ -452,6 +455,7 @@ a:focus-visible {
   .header {
     grid-template-columns: 1fr;
     grid-template-rows: 26px 403px 185px 114px;
+    height: minmax(728px, 100vh);
   }
 
   .header__theme-menu {
