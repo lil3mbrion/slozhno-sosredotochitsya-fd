@@ -1,4 +1,4 @@
-.page{
+.page {
   background-image: var(--bg-pic);
   background-size:cover;
   background-position: center;
@@ -52,7 +52,7 @@
   top: 8px;
 }
 
-.decorated__element p{
+.decorated__element p {
   color: var(--accent-color);
 }
 
@@ -336,7 +336,6 @@ a:hover {
 }
 
 a:focus-visible {
-  outline: none;
   outline: 1px solid var(--main-discr-color);
   outline-offset: 2px;
 }
@@ -350,7 +349,7 @@ a:focus-visible {
 @media (width>=768px) {
   .header {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: 269px 272px 279px 163px;
     margin: 20px 20px 0px 20px;
     margin-bottom: 80px;
