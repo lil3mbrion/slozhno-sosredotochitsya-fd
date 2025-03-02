@@ -271,6 +271,7 @@
   grid-template-rows: 25px 598px 25px;
   grid-template-columns: 1fr;
   height: 100vh;
+  min-height: 647px;
 }
 
 .footer_title {
@@ -444,6 +445,7 @@ a:focus-visible {
   .footer {
     margin: 80px 20px 20px 20px;
     grid-template-rows: 25px 934px 25px;
+    min-height: 984px;
   }
 
   .footer_title {
@@ -512,6 +514,7 @@ a:focus-visible {
 
   .footer {
     grid-template-rows: 25px 678px 25px;
+    min-height: 728px;
   }
 }
 
