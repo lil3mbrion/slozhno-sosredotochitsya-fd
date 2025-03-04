@@ -46,4 +46,14 @@
   .decorated__element::after {
     display: none;
   }
+
+  .theme-dark {
+    .decorated__element p {
+      display: block;
+    }
+    
+    .decorated__element::after {
+      display: block;
+    }
+  }
 }

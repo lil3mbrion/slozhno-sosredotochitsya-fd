@@ -9,7 +9,7 @@
 .header {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: 162px 257px 172px 56px;
+  grid-template-rows: 24.2% 38.5% 25.7% 8.4%;
   margin: 10px 10px 0px 10px;
   margin-bottom: 30px;
   min-height: 668px;
@@ -19,7 +19,6 @@
 .decorated__element {
   position: absolute;
   width: 33px;
-  height: 26px;
   top: 10px;
   right: 38px;
   font-family: 'IBM Plex Mono', sans-serif;
@@ -48,7 +47,7 @@
   display: block;
   border-radius: 50%;
   background-color: var(--accent-color);
-  backdrop-filter: blur(4px);
+  box-shadow: 0 0 4px 2px var(--accent-color);
   position: absolute;
   left: 43px;
   top: 8px;
@@ -107,7 +106,6 @@
   align-self: end;
   justify-self: end;
   width: 355px;
-  height: 117px;
 }
 
 .header__block-title {
@@ -135,7 +133,7 @@
   margin: 0 10px 0 10px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
+  grid-auto-rows: auto;
   row-gap: 20px;
   grid-template-areas: 
   "h1"
@@ -146,6 +144,7 @@
   "p4"
   "p5"
   "h3"
+  "h4"
   "p6"
   "p7"
   "p8"
@@ -166,7 +165,7 @@
   margin-top: 30px;
 }
 
-.grid-area-for-first-title {
+h2:nth-child(1) {
   grid-area: h1;
 }
 
@@ -181,7 +180,7 @@
   text-decoration: none;
 }
 
-.grid-area-for-first-discription {
+article:nth-child(2) {
   grid-area: p1;
 }
 
@@ -194,51 +193,52 @@
   color: var(--main-discr-color);
 }
 
-.main_discription-special-title {
-  margin-bottom: 10px;
-}
-
-.grid-area-for-second-discription {
+article:nth-child(3) {
   grid-area: p2;
 }
 
-.grid-area-for-second-title {
+h2:nth-child(4) {
   grid-area: h2;
 }
 
-.grid-area-for-third-discription {
+article:nth-child(5) {
   grid-area: p3;
 }
 
-.grid-area-for-fourth-discription {
+article:nth-child(6) {
   grid-area: p4;
 }
 
-.grid-area-for-fifth-discription {
+article:nth-child(7) {
   grid-area: p5;
 }
 
-.grid-area-for-third-title {
+h2:nth-child(8) {
   grid-area: h3;
 }
 
-.grid-area-for-sixth-discription {
+h2:nth-child(9) {
+  grid-area: h4;
+  margin-bottom: 0px;
+}
+
+article:nth-child(10) {
   grid-area: p6;
 }
 
-.grid-area-for-seventh-discription {
+article:nth-child(11) {
   grid-area: p7;
 }
 
-.grid-area-for-eigth-discription {
+article:nth-child(12) {
   grid-area: p8;
 }
 
-.grid-area-for-ninth-discription {
+article:nth-child(13) {
   grid-area: p9;
 }
 
-.grid-area-for-tenth-discription {
+article:nth-child(14) {
   grid-area: p10;
 }
 
@@ -268,7 +268,7 @@
 .footer {
   margin: 50px 10px 10px 10px;
   display: grid;
-  grid-template-rows: 25px 598px 25px;
+  grid-template-rows: 3.7% 89.5% 3.7%;
   grid-template-columns: 1fr;
   height: 100vh;
   min-height: 668px;
@@ -336,7 +336,7 @@ li:hover {
 }
 
 a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--main-discr-color);
 }
 
 a:focus-visible {
@@ -354,7 +354,7 @@ a:focus-visible {
   .header {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 269px 272px 279px 163px;
+    grid-template-rows: 26.3% 26.6% 27.2% 16%;
     margin: 20px 20px 0px 20px;
     margin-bottom: 40px;
     min-height: 1024px;
@@ -368,7 +368,8 @@ a:focus-visible {
     margin: 0 20px 0 20px;
     display: grid;
     grid-template-columns: 236px 1fr;
-    grid-template-rows: auto 374px repeat(3, auto) 257px repeat(5, auto);
+    grid-template-rows: auto 374px repeat(3, auto) 257px;
+    grid-auto-rows: auto;
     row-gap: 20px;
     column-gap: 20px;
     grid-template-areas: 
@@ -378,7 +379,9 @@ a:focus-visible {
     "p3 p3"
     "p4 p4"
     "p5 p5"
+    "h3 h4"
     "h3 p6"
+    ". p6"
     ". p7"
     ". p8"
     ". p9"
@@ -444,7 +447,7 @@ a:focus-visible {
 
   .footer {
     margin: 80px 20px 20px 20px;
-    grid-template-rows: 25px 934px 25px;
+    grid-template-rows: 2.4% 91.2% 2.4%;
   }
 
   .footer_title {
@@ -456,7 +459,7 @@ a:focus-visible {
 @media(width>=1024px) {
   .header {
     grid-template-columns: 1fr;
-    grid-template-rows: 26px 403px 185px 114px;
+    grid-template-rows: 3.4% 52.4% 24% 14.8%;
     min-height: 768px;
   }
 
@@ -493,12 +496,14 @@ a:focus-visible {
 
   .main {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 304px auto 491px repeat(5, auto);
+    grid-template-rows: auto 304px auto 491px;
+    grid-auto-rows: auto;
     grid-template-areas: 
     "h1 p1 p1"
     ". p2 p2"
     "h2 . ."
     "p3 p4 p5"
+    "h3 h4 h4"
     "h3 p6 p6"
     ". p7 p7"
     ". p8 p8"
@@ -512,7 +517,7 @@ a:focus-visible {
   }
 
   .footer {
-    grid-template-rows: 25px 678px 25px;
+    grid-template-rows: 3.3% 88.3% 3.3%;
   }
 }
 
