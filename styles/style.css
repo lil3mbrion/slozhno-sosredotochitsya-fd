@@ -402,6 +402,7 @@ a:focus-visible {
   .main_block-title {
     justify-self: start;
     align-self: start;
+    max-width: 236px;
   }
 
   .gallery {
@@ -445,10 +446,6 @@ a:focus-visible {
 
   .footer_title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
-  .main_block-title {
-    max-width: 236px;
   }
 }
 
