@@ -9,9 +9,9 @@
 .header {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: 24.2% 38.5% 25.7% 8.4%;
-  margin: 10px 10px 0px 10px;
-  margin-bottom: 30px;
+  grid-template-rows: 25.9% 38.5% 25.7%;
+  margin: 0px 10px 0px 10px;
+  margin-bottom: 40px;
   min-height: 668px;
   height: 100vh;
 }
@@ -20,23 +20,13 @@
   position: absolute;
   width: 33px;
   top: 10px;
-  right: 38px;
+  right: 29px;
   font-family: 'IBM Plex Mono', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
   letter-spacing: 0%;
   text-align: center;
-}
-
-.decorated__element::before {
-  content: "";
-  width: 25px;
-  height: 25px;
-  border-top: 2px solid var(--accent-color);
-  border-right: 2px solid var(--accent-color);
-  position: absolute;
-  left: 36px;
 }
 
 .decorated__element::after {
@@ -161,8 +151,12 @@
   color: var(--main-title-text-color);
 }
 
-.main_block-title:not(:first-child) {
+.main_block-title:nth-child(4) {
   margin-top: 30px;
+}
+
+.main_discription:nth-child(7) {
+  margin-bottom: 30px;
 }
 
 h2:nth-child(1) {
@@ -217,7 +211,7 @@ h2:nth-child(8) {
   grid-area: h3;
 }
 
-h2:nth-child(9) {
+h3:nth-child(9) {
   grid-area: h4;
   margin-bottom: 0px;
 }
@@ -266,9 +260,9 @@ article:nth-child(14) {
 }
 
 .footer {
-  margin: 50px 10px 10px 10px;
+  margin: 40px 10px 0px 10px;
   display: grid;
-  grid-template-rows: 3.7% 89.5% 3.7%;
+  grid-template-rows: 1fr;
   grid-template-columns: 1fr;
   height: 100vh;
   min-height: 668px;
@@ -286,53 +280,13 @@ article:nth-child(14) {
   letter-spacing: 0%;
 }
 
-.footer_block-for-corner {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-}
-
-.footer_top-corner {
-  display: block;
-  width: 25px;
-  height: 25px;
-  justify-self: end;
-  border-top: 2px solid var(--accent-color);
-  border-right: 2px solid var(--accent-color);
-}
-
-.footer_bottom-corner {
-  display: block;
-  width: 25px;
-  height: 25px;
-  justify-self: start;
-  border-bottom: 2px solid var(--accent-color);
-  border-left: 2px solid var(--accent-color);
-}
-
-.header_block-for-corner {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-}
-
-.header_bottom-corner {
-  display: block;
-  width: 25px;
-  height: 25px;
-  justify-self: start;
-  align-self: end;
-  border-bottom: 2px solid var(--accent-color);
-  border-left: 2px solid var(--accent-color);
-}
-
 button:focus-visible {
   outline: none;
   border-bottom: 1px solid var(--accent-color);
 }
 
 li:hover {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--btn-hover-color);
 }
 
 a:hover {
@@ -350,14 +304,51 @@ a:focus-visible {
   width: 100%;
 }
 
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  border-top: 2px solid var(--accent-color);
+  border-right: 2px solid var(--accent-color);
+  height: 25px;
+  width: 25px;
+  z-index: 1;
+  right: 0;
+  top: 10px;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid var(--accent-color);
+  border-left: 2px solid var(--accent-color);
+  height: 25px;
+  width: 25px;
+  z-index: 1;
+  left: 0;
+  bottom: 10px;
+}
+
 @media (width>=768px) {
   .header {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 26.3% 26.6% 27.2% 16%;
-    margin: 20px 20px 0px 20px;
-    margin-bottom: 40px;
+    grid-template-rows: 28.3% 26.6% 27.2%;
+    margin: 0px 20px 60px 20px;
     min-height: 1024px;
+  }
+
+  .decorated-zone::before {
+    right: 0;
+    top: 20px;
+  }
+  
+  .decorated-zone::after {
+    left: 0;
+    bottom: 20px;
   }
 
   .header__block-title {
@@ -367,31 +358,37 @@ a:focus-visible {
   .main {
     margin: 0 20px 0 20px;
     display: grid;
-    grid-template-columns: 236px 1fr;
-    grid-template-rows: auto 374px repeat(3, auto) 257px;
-    grid-auto-rows: auto;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
     row-gap: 20px;
     column-gap: 20px;
     grid-template-areas: 
     "h1 p1"
-    ". p2"
-    "h2 ."
+    "h1 p2"
+    "h2 h2"
     "p3 p3"
     "p4 p4"
     "p5 p5"
     "h3 h4"
     "h3 p6"
-    ". p6"
-    ". p7"
-    ". p8"
-    ". p9"
-    ". p10"
+    "h3 p6"
+    "h3 p7"
+    "h3 p8"
+    "h3 p9"
+    "h3 p10"
     ;
+  }
+
+  .main_block-title:nth-child(4) {
+    margin-top: 60px;
+  }
+
+  .main_discription:nth-child(7) {
+    margin-bottom: 60px;
   }
 
   .decorated__element {
     top: 20px;
-    right: 48px;
   }
 
   .header__block-for-discription {
@@ -405,10 +402,6 @@ a:focus-visible {
   .main_block-title {
     justify-self: start;
     align-self: start;
-  }
-
-  .main_block-title:not(:first-child) {
-    margin-top: 0px;
   }
 
   .gallery {
@@ -446,26 +439,29 @@ a:focus-visible {
   }
 
   .footer {
-    margin: 80px 20px 20px 20px;
-    grid-template-rows: 2.4% 91.2% 2.4%;
+    margin: 60px 20px 0px 20px;
+    grid-template-rows: 1fr;
   }
 
   .footer_title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
+  .main_block-title {
+    max-width: 236px;
+  }
 }
 
 @media(width>=1024px) {
   .header {
     grid-template-columns: 1fr;
-    grid-template-rows: 3.4% 52.4% 24% 14.8%;
+    grid-template-rows: 5.9% 50.4% 26.2%;
     min-height: 768px;
   }
 
   .header__theme-menu {
     justify-self: center;
-    align-self: center;
+    align-self: end;
   }
 
   .header__theme-menu-list {
@@ -477,16 +473,8 @@ a:focus-visible {
     min-width: 70px;
   }
 
-  .header__theme-menu-item:not(:last-child) {
-    margin-bottom: 0px;
-  }
-
   .header__block-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
-  .header__block-for-title {
-    margin-bottom: 20px;
   }
 
   .header__block-for-discription {
@@ -494,21 +482,25 @@ a:focus-visible {
     height: 71px;
   }
 
+  .header__theme-menu-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
   .main {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 304px auto 491px;
+    grid-template-rows: auto;
     grid-auto-rows: auto;
     grid-template-areas: 
     "h1 p1 p1"
-    ". p2 p2"
-    "h2 . ."
+    "h1 p2 p2"
+    "h2 h2 h2"
     "p3 p4 p5"
     "h3 h4 h4"
     "h3 p6 p6"
-    ". p7 p7"
-    ". p8 p8"
-    ". p9 p9"
-    ". p10 p10"
+    "h3 p7 p7"
+    "h3 p8 p8"
+    "h3 p9 p9"
+    "h3 p10 p10"
     ;
   }
 
@@ -517,7 +509,11 @@ a:focus-visible {
   }
 
   .footer {
-    grid-template-rows: 3.3% 88.3% 3.3%;
+    grid-template-rows: 1fr;
+  }
+
+  .main_block-title {
+    max-width: 315px;
   }
 }
 

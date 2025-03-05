@@ -10,6 +10,7 @@
   --footer-title-color: #FFC2E6;
   --footer-title-shadow-color: #FF8DCB;
   --link-shadow-color: #FF8DCB;
+  --btn-hover-color:rgba(50, 49, 45, 0.4);
   --bg-pic: url(../images/cover-image-light.png);
 }
 
@@ -36,6 +37,7 @@
     --footer-title-color: #FFC2E6;
     --footer-title-shadow-color: #FF8DCB;
     --link-shadow-color: #FF8DCB;
+    --btn-hover-color:rgba(50, 49, 45, 0.4);
     --bg-pic: url(../images/cover-image-light.png);
   }
 
