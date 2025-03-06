@@ -128,18 +128,44 @@
   grid-template-areas: 
   "h1"
   "p1"
-  "p2"
   "h2"
-  "p3"
-  "p4"
-  "p5"
+  "p2"
   "h3"
-  "h4"
-  "p6"
-  "p7"
-  "p8"
-  "p9"
-  "p10";
+  "p3"
+  ;
+}
+
+.container {
+  display: grid;
+  row-gap: 20px;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+h2:nth-child(1) {
+  grid-area: h1;
+}
+
+.container:nth-child(2) {
+  grid-area: p1;
+}
+
+h2:nth-child(3) {
+  grid-area: h2;
+  margin-top: 30px;
+}
+
+.container:nth-child(4) {
+  grid-area: p2;
+  margin-bottom: 30px;
+}
+
+h2:nth-child(5) {
+  grid-area: h3;
+}
+
+.container:nth-child(6) {
+  grid-area: p3;
 }
 
 .main_block-title {
@@ -149,18 +175,6 @@
   line-height: 23.4px;
   letter-spacing: 0%;
   color: var(--main-title-text-color);
-}
-
-.main_block-title:nth-child(4) {
-  margin-top: 30px;
-}
-
-.main_discription:nth-child(7) {
-  margin-bottom: 30px;
-}
-
-h2:nth-child(1) {
-  grid-area: h1;
 }
 
 .main_discription {
@@ -174,10 +188,6 @@ h2:nth-child(1) {
   text-decoration: none;
 }
 
-article:nth-child(2) {
-  grid-area: p1;
-}
-
 .main_discripption-text {
   font-family: 'IBM Plex Mono', sans-serif;
   font-weight: 400;
@@ -185,55 +195,6 @@ article:nth-child(2) {
   line-height: 23.4px;
   letter-spacing: 0%;
   color: var(--main-discr-color);
-}
-
-article:nth-child(3) {
-  grid-area: p2;
-}
-
-h2:nth-child(4) {
-  grid-area: h2;
-}
-
-article:nth-child(5) {
-  grid-area: p3;
-}
-
-article:nth-child(6) {
-  grid-area: p4;
-}
-
-article:nth-child(7) {
-  grid-area: p5;
-}
-
-h2:nth-child(8) {
-  grid-area: h3;
-}
-
-h3:nth-child(9) {
-  grid-area: h4;
-  margin-bottom: 0px;
-}
-
-article:nth-child(10) {
-  grid-area: p6;
-}
-
-article:nth-child(11) {
-  grid-area: p7;
-}
-
-article:nth-child(12) {
-  grid-area: p8;
-}
-
-article:nth-child(13) {
-  grid-area: p9;
-}
-
-article:nth-child(14) {
-  grid-area: p10;
 }
 
 .gallery {
@@ -364,26 +325,17 @@ a:focus-visible {
     column-gap: 20px;
     grid-template-areas: 
     "h1 p1"
-    "h1 p2"
-    "h2 h2"
-    "p3 p3"
-    "p4 p4"
-    "p5 p5"
-    "h3 h4"
-    "h3 p6"
-    "h3 p6"
-    "h3 p7"
-    "h3 p8"
-    "h3 p9"
-    "h3 p10"
+    "h2 ."
+    "p2 p2"
+    "h3 p3"
     ;
   }
 
-  .main_block-title:nth-child(4) {
+  h2:nth-child(3) {
     margin-top: 60px;
   }
-
-  .main_discription:nth-child(7) {
+  
+  .container:nth-child(4) {
     margin-bottom: 60px;
   }
 
@@ -489,16 +441,17 @@ a:focus-visible {
     grid-auto-rows: auto;
     grid-template-areas: 
     "h1 p1 p1"
-    "h1 p2 p2"
-    "h2 h2 h2"
-    "p3 p4 p5"
-    "h3 h4 h4"
-    "h3 p6 p6"
-    "h3 p7 p7"
-    "h3 p8 p8"
-    "h3 p9 p9"
-    "h3 p10 p10"
+    "h2 . ."
+    "p2 p2 p2"
+    "h3 p3 p3"
     ;
+  }
+
+  .container:nth-child(4) {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 0;
+    column-gap: 20px;
   }
 
   .gallery {
